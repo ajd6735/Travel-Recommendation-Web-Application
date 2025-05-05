@@ -1,69 +1,77 @@
 <!DOCTYPE html>
+
 <head>
     <title>Travel Recomendation Web App</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
 
     <!-- Navigation bar -->
     <nav>
-       <div id="home">
-        <div class="site-name">
-            TravelBloom
-        </div>
-        <div class="topdiv">
-            <a href="#home" class="topmenu">Home</a>
-            <a href="#aboutus" class="topmenu">About Us</a>
-            <a href="#contactus" class="topmenu">Contact Us</a>
-        </div>
-       </div> 
+            <div class="site-name">
+                TravelBloom
+            </div>
+            
+            <div class="topdiv">
+                <a href="#home-section" class="topmenu">Home</a>
+                <a href="#about-us" class="topmenu">About Us</a>
+                <a href="#contact-us" class="topmenu">Contact Us</a>
+            </div>
     </nav>
+    
     <!--Home  -->
-    <section id="home" class="container">
+    <section id="home-section" class="container">
         <div>
-            <h1>EXPLORE DREAM DESTINATIONS</h1>
-            <p id="home-text">Lorem Ipsum ...</p>
             <div>
-                <button id="book">Book Now</button>
+                <h1>EXPLORE DREAM DESTINATIONS</h1>
+            </div>
+            <div>
+                <div>
+                    <p id="home-text">Lorem Ipsum ...</p>
+                </div>
+                <div>
+                    <button id="book">Book Now</button>
+                </div>
             </div>
         </div>
     </section>
     <!-- About Us -->
 
-    <section id="home" class="container">
+    <section id="about-us" class="container">
         <div>
             <h1>ABOUT US</h1>
             <p id="about-us-text">
-                <div id="team-info">
-                    <h2>Our Team</h2>
-                    <div id="team-member">
-                        <h4>John Doe</h4>
-                        <p id="member-description">
-                            great person
-                        </p>
-                        <button id="member-btn">
-                            CEO
-                        </button>
-                    </div>
-                    <div id="team-member">
-                        <h4>John Doe</h4>
-                        <p id="member-description">
-                            great person
-                        </p>
-                        <button id="member-btn">
-                            CEO
-                        </button>
-                    </div>
-                    <div id="team-member">
-                        <h4>John Doe</h4>
-                        <p id="member-description">
-                            great person
-                        </p>
-                        <button id="member-btn">
-                            CEO
-                        </button>
-                    </div>
+            <div id="team-info">
+                <h2>Our Team</h2>
+                <div id="team-member">
+                    <h4>John Doe</h4>
+                    <p id="member-description">
+                        great person
+                    </p>
+                    <button id="member-btn">
+                        CEO
+                    </button>
                 </div>
+                <div id="team-member">
+                    <h4>John Doe</h4>
+                    <p id="member-description">
+                        great person
+                    </p>
+                    <button id="member-btn">
+                        CEO
+                    </button>
+                </div>
+                <div id="team-member">
+                    <h4>John Doe</h4>
+                    <p id="member-description">
+                        great person
+                    </p>
+                    <button id="member-btn">
+                        CEO
+                    </button>
+                </div>
+            </div>
             </p>
         </div>
     </section>
@@ -72,9 +80,27 @@
     <section id="contact-us">
         <div>
             <h1>CONTACT US</h1>
+            <p id="contact-us-text">Get in touch...</p>
+        </div>
+
+        <div class="flex-right">
+            <fieldset>
+                <legend class="intro">
+                    <label for="name">Name</label>
+                    <input type="text">
+                    <label for="email">Email</label>
+                    <input type="text">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+
+                    <div class="flex-right">
+                        <button id="submit">Submit</button>
+                    </div>
+                </legend>
+            </fieldset>
         </div>
     </section>
-    
+
 
     <script src="./travel_recomendations.js"></script>
 </body>
