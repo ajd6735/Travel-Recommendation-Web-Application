@@ -10,7 +10,7 @@
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #0f2743;
-    background-image: url("../public/yves-scheuber-hkYsARmcLT0-unsplash.jpg");
+    background-image: url("../public/benjamin-gremler-qONhYBVNz1c-unsplash.jpg");
     background-size: cover;
 }
 
@@ -25,17 +25,16 @@ nav {
 
 .site-name {
     float: left;
-    padding-left: 1cm;
     color: #fff;
     font-weight: lighter;
     font-family: Oswald, sans-serif;
-    font-size: 20px;
+    font-size: 10px;
     font-style: italic;
 }
 
 .topdiv {
     float: right;
-    padding-right: 1cm;
+
 }
 
 .topmenu {
@@ -54,16 +53,16 @@ nav {
 
 
 h1 {
-    text-align: justify;
-    font-size: 50px;
-    float: left;
-    color:  var(--text-color);
-    margin: 40px;
-    margin-left: 60px;
-    margin-top: 40px;
-    margin-bottom: 0px;
+    font-size: 80px;
+    margin-bottom: 20px;
     font-family: Oswald, sans-serif;
-  
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-family: Oswald, sans-serif;
 }
 
 .introduction {
@@ -78,7 +77,7 @@ h1 {
 
 .container {
     padding: auto;
-    margin: 50px;
+    margin: 20px;
 }
 
 /* Home Section */
@@ -133,6 +132,21 @@ h1 {
     flex-direction: column;
 }
 
+.about-us-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+#about-us-h1 {
+    margin-bottom: 20px;
+}
+
+#about-us-text {
+  font-size: 18px;
+  margin: 20px 0 40px 0;
+  line-height: 1.6;
+}
+
 #team-info {
     margin-top: 40px;
 }
@@ -146,7 +160,7 @@ h1 {
 }
 
 .team-member {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
     border-radius: 10px;
     width: 250px;
@@ -170,6 +184,74 @@ h1 {
 .member-btn:hover {
     background-color: #555;
 }
+
+/* Contat Us Section */
+.contact-section {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-container {
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#submit {
+    padding: 20px 40px;
+    font-size: 16px;
+    background-color: var(--text-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover {
+    background-color: var(--secondary-text-color);
+}
+
 
 
 

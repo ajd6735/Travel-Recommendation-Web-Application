@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Travel Recomendation Web App</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <nav>
+    <div class="site-name">TravelBloom</div>
+
+    <div class="topdiv">
+      <a href="./home.html" class="topmenu">Home</a>
+      <a href="#about-us" class="topmenu">About Us</a>
+      <a href="./contact-us.html" class="topmenu">Contact Us</a>
+    </div>
+
+    <div>
+        <form class="search-bar" onsubmit="event.preventDefault(); searchFunction();">
+            <input type="text" id="search-input" placeholder="Search destinations..." />
+            <button type="submit">Search</button>
+            <button type="button" onclick="clearSearch()">Clear</button>
+          </form>
+    </div>
+  </nav>
+
+  <!-- About Us -->
+  <section id="about-us" class="container about-us-section">
+    <div class="about-us-content">
+      <h1 id="about-us-h1">ABOUT US</h1>
+      <p id="about-us-text">
+        Our team is dedicated to creating unforgettable travel experiences.
+      </p>
+  
+
+      <div id="team-info">
+        <h2>Meet Our Team</h2>
+        <div class="team-members">
+          <div class="team-member">
+            <h4>John Doe</h4>
+            <p class="member-description">
+              Passionate traveler and visionary leader.
+            </p>
+            <button class="member-btn">CEO</button>
+          </div>
+          <div class="team-member">
+            <h4>Jane Smith</h4>
+            <p class="member-description">
+              Creative mind behind our branding and design.
+            </p>
+            <button class="member-btn">CMO</button>
+          </div>
+          <div class="team-member">
+            <h4>Emily Johnson</h4>
+            <p class="member-description">
+              Expert in logistics and global partnerships.
+            </p>
+            <button class="member-btn">COO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="./travel_recomendations.js"></script>
+</body>
