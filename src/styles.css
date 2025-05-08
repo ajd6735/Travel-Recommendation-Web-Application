@@ -4,7 +4,7 @@
     --main-color: #2e7ed9;
     --secondary-color: #84b0e1;
     --text-color: #1d4879;
-    --secondary-text-color: #0f2743;
+    --secondary-text-color: #0f2742;
 }
 
 body {
@@ -21,6 +21,45 @@ nav {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+#search-btn {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    padding: 4px;
+    border-radius: 8px;
+    margin: 1px;
+    font-family: Oswald, sans-serif;
+    font-weight: 400;
+}
+
+#search-btn:hover {
+    background-color: var(--secondary-text-color);
+    color: #fff;
+}
+
+#clear-btn {
+    background-color: var(--secondary-color);
+    color: var(--secondary-text-color);
+    padding: 4px;
+    border-radius: 8px;
+    margin: 1px;
+    font-family: Oswald, sans-serif;
+    font-weight: 400;
+}
+
+#clear-btn:hover {
+    background-color: var(--secondary-text-color);
+    color: #fff;
+}
+
+#search-bar {
+    padding: 4px;
+    border-radius: 8px;
+    margin: 1px;
+    font-family: Oswald, sans-serif;
+    font-weight: 100;
+    font-style: italic;
 }
 
 .site-name {
@@ -54,8 +93,9 @@ nav {
 
 h1 {
     font-size: 80px;
-    margin-bottom: 20px;
     font-family: Oswald, sans-serif;
+    justify-content: center;
+    color: var(--secondary-text-color);
 }
 
 h2 {
@@ -95,13 +135,14 @@ h2 {
 .home-content {
     max-width: 700px;
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.2); 
     border-radius: 10px;
+    flex-direction: column;
 }
 
 #home-text {
     font-size: 18px;
-    margin: 20px 0;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.2); 
 }
 
 #book-now {
@@ -126,7 +167,7 @@ h2 {
     justify-content: center;
     align-items: center;
     padding: 60px 20px;
-    background: rgba(248, 244, 244, 0.05);
+    background: rgba(248, 244, 244, 0.25);
     text-align: center;
     color: #fff;
     flex-direction: column;
@@ -135,6 +176,7 @@ h2 {
 .about-us-content {
     max-width: 800px;
     width: 100%;
+    flex-direction: row;
 }
 
 #about-us-h1 {
@@ -145,6 +187,15 @@ h2 {
   font-size: 18px;
   margin: 20px 0 40px 0;
   line-height: 1.6;
+  background-color: rgba(61, 61, 61, 0.3);
+  border-radius: 10px;
+  padding: 40px;
+  font-weight: lighter;
+  font-style: italic;
+}
+
+strong {
+    font-weight: 800;
 }
 
 #team-info {
@@ -198,20 +249,25 @@ h2 {
 
 .contact-container {
     max-width: 600px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.3); 
+    width: 100%;     
 }
 
-.contact-header {
+#contact-us-text {
     text-align: center;
-    margin-bottom: 30px;
+    padding-top: 40px;
 }
 
 .contact-form fieldset {
+    text-align: center;
+    padding: 40px;
     border: none;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .contact-form label {

@@ -18,29 +18,19 @@
             <a href="./about-us.html" class="topmenu">About Us</a>
             <a href="#contact-us" class="topmenu">Contact Us</a>
         </div>
-
-        <div>
-            <form class="search-bar" onsubmit="event.preventDefault(); searchFunction();">
-                <input type="text" id="search-input" placeholder="Search destinations..." />
-                <button type="submit">Search</button>
-                <button type="button" onclick="clearSearch()">Clear</button>
-              </form>
-        </div>
     </nav>
 
     <!-- Contact Us -->
     <section id="contact-us" class="contact-section">
+        <h1>CONTACT US</h1>
         <div class="contact-container">
-            <div class="contact-header">
-                <h1>CONTACT US</h1>
-                <p id="contact-us-text">We’d love to hear from you! Please fill out the form below.</p>
-            </div>
 
             <form class="contact-form">
+                <p id="contact-us-text">We’d love to hear from you! Please fill out the form below.</p>
                 <fieldset>
                     <input type="text" id="name" name="name" required placeholder="Name">
                     <input type="email" id="email" name="email" required placeholder="Email">
-                    <textarea id="message" name="message" rows="6" required placeholder="Leave us a message here"></textarea>
+                    <textarea id="message" name="message" rows="6" required placeholder="Leave us a message."></textarea>
 
                     <button id="submit" type="submit">Submit</button>
                 </fieldset>
