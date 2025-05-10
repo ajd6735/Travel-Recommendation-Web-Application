@@ -28,7 +28,20 @@ function searchFunction() {
         });
       });
 
-      // displayResults(matchingCities);
+      // Search in temples
+      data.temples.forEach(temple => {
+        if (temple.name.toLowerCase().includes(query)) {
+          matchedItems.push(temple);
+        }
+      });
+
+      // Search in beaches
+      data.beaches.forEach(beach => {
+        if (beach.name.toLowerCase().includes(query)) {
+          matchedItems.push(beach);
+        }
+      });
+
       // Open the new results window with the matched cities
       openResultsInNewWindow(matchingCities);
     })
@@ -37,39 +50,23 @@ function searchFunction() {
     );
 }
 
-function displayResults(cities) {
-  resultsContainer.innerHTML = "";
-
-  if (cities.length === 0) {
-    resultsContainer.innerHTML = "<p>No destinations found.</p>";
-    return;
-  }
-
-  cities.forEach((city) => {
-    const card = document.createElement("div");
-    card.className = "city-card";
-    card.innerHTML = `
-      <h3>${city.name}</h3>
-      <img src="${city.imageUrl}" alt="${city.name}" width="200">
-      <p>${city.description}</p>
-    `;
-    resultsContainer.appendChild(card);
-  });
-}
-
-function clearSearch() {
-  searchInput.value = "";
-  resultsContainer.innerHTML = "";
-
-  console.log("Search cleared");
-}
-
 
 function openResultsInNewWindow(cities) {
   // Store the search results in localStorage
   localStorage.setItem("searchResults", JSON.stringify(cities));
-  
-  // Open a new window that will read the data
-  window.open("results-window.html", "ResultsWindow", "width=800,height=800");
-}
 
+  // Dimensions of the popup
+  const width = 800;
+  const height = 760;
+
+  // Calculate the position to center the popup
+  const left = (screen.width - width) / 2;
+  const top = (screen.height - height) / 2;
+
+  // Open the window in the center
+  window.open(
+    "results-window.html",
+    "ResultsWindow",
+    `width=${width},height=${height},left=${left},top=${top}`
+  );
+}

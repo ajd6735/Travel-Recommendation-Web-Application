@@ -309,22 +309,31 @@ strong {
 }
 
 /* Search */
-
-.result-card {
+.city-card {
     border: 1px solid #ccc;
-    padding: 16px;
-    margin-top: 16px;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-  }
-  
-  .result-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+    padding: 10px;
+    margin-bottom: 15px;
     border-radius: 8px;
-    margin-top: 10px;
-  }
+    background-color: #fff;
+    color: #0f2742;
+    text-align: center;
+    /* Add this line */
+}
+
+.city-card img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    /* Add this line */
+}
+
+#destination-text {
+    color: #0f2742;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-style: italic;
+}
 
 
 
