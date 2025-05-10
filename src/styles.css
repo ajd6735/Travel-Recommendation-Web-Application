@@ -308,6 +308,23 @@ strong {
     background-color: var(--secondary-text-color);
 }
 
+/* Search */
+
+.result-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin-top: 16px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .result-img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
 
 
 

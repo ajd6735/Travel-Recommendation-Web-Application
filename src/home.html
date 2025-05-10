@@ -17,11 +17,11 @@
     </div>
 
     <div>
-        <form class="search-bar" onsubmit="event.preventDefault(); searchFunction();">
-            <input id="search-bar" type="text" id="search-input" placeholder="Search destinations..." />
-            <button id="search-btn">Search</button>
-            <button id="clear-btn" onclick="clearSearch()">Clear</button>
-        </form>
+      <form class="search-bar" onsubmit="event.preventDefault(); searchFunction();">
+        <input id="search-input" type="text" placeholder="Search destinations..." />
+        <button type="button" id="search-btn">Search</button>
+        <button type="button" id="clear-btn">Clear</button>
+      </form>
     </div>
   </nav>
 
@@ -35,6 +35,8 @@
       
       <button id="book-now">Book Now</button>
     </div>
+
+    <div id="results" class="results-container"></div>
   </section>
 
   <script src="./travel_recomendations.js"></script>
