@@ -18,12 +18,12 @@ function searchFunction() {
       return response.json();
     })
     .then((data) => {
-      const matchingCities = [];
+      const matchedItems = [];
 
       data.countries.forEach((country) => {
         country.cities.forEach((city) => {
           if (city.name.toLowerCase().includes(query)) {
-            matchingCities.push(city);
+            matchedItems.push(city);
           }
         });
       });
@@ -43,7 +43,7 @@ function searchFunction() {
       });
 
       // Open the new results window with the matched cities
-      openResultsInNewWindow(matchingCities);
+      openResultsInNewWindow(matchedItems);
     })
     .catch((error) =>
       console.error("There was a problem with the fetch operation:", error)
@@ -51,9 +51,9 @@ function searchFunction() {
 }
 
 
-function openResultsInNewWindow(cities) {
+function openResultsInNewWindow(places) {
   // Store the search results in localStorage
-  localStorage.setItem("searchResults", JSON.stringify(cities));
+  localStorage.setItem("searchResults", JSON.stringify(places));
 
   // Dimensions of the popup
   const width = 800;
@@ -69,4 +69,10 @@ function openResultsInNewWindow(cities) {
     "ResultsWindow",
     `width=${width},height=${height},left=${left},top=${top}`
   );
+}
+
+function clearSearch() {
+  searchInput.value = "";
+  resultsContainer.innerHTML = ""; // Clear the results container
+  localStorage.removeItem("searchResults"); // Clear the stored search results
 }
