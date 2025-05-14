@@ -56,8 +56,8 @@ function openResultsInNewWindow(places) {
   localStorage.setItem("searchResults", JSON.stringify(places));
 
   // Dimensions of the popup
-  const width = 800;
-  const height = 760;
+  const width = 600;
+  const height = 600;
 
   // Calculate the position to center the popup
   const left = (screen.width - width) / 2;
