@@ -28,51 +28,57 @@ function searchFunction() {
         });
       });
 
-      // Search in temples
-      data.temples.forEach(temple => {
+      data.temples.forEach((temple) => {
         if (temple.name.toLowerCase().includes(query)) {
           matchedItems.push(temple);
         }
       });
 
-      // Search in beaches
-      data.beaches.forEach(beach => {
+      data.beaches.forEach((beach) => {
         if (beach.name.toLowerCase().includes(query)) {
           matchedItems.push(beach);
         }
       });
 
-      // Open the new results window with the matched cities
-      openResultsInNewWindow(matchedItems);
+      showFloatingCards(matchedItems);
     })
-    .catch((error) =>
-      console.error("There was a problem with the fetch operation:", error)
-    );
+    .catch((error) => { 
+      console.error("Error fetching data:", error);
+      const container = document.getElementById("floating-results");
+      container.innerHTML = `<div class="floating-card"><p>Error fetching data. Please try again later.</p></div>`;
+    });
 }
 
-
-function openResultsInNewWindow(places) {
-  // Store the search results in localStorage
-  localStorage.setItem("searchResults", JSON.stringify(places));
-
-  // Dimensions of the popup
-  const width = 600;
-  const height = 600;
-
-  // Calculate the position to center the popup
-  const left = (screen.width - width) / 2;
-  const top = (screen.height - height) / 2;
-
-  // Open the window in the center
-  window.open(
-    "results-window.html",
-    "ResultsWindow",
-    `width=${width},height=${height},left=${left},top=${top}`
-  );
-}
 
 function clearSearch() {
   searchInput.value = "";
-  resultsContainer.innerHTML = ""; // Clear the results container
-  localStorage.removeItem("searchResults"); // Clear the stored search results
+  const container = document.getElementById("floating-results");
+  container.innerHTML = "";
+  container.classList.add("hidden");
+}
+
+
+function showFloatingCards(places) {
+  const container = document.getElementById("floating-results");
+  container.innerHTML = ""; // clear previous results
+  container.classList.remove("hidden");
+
+  if (places.length === 0) {
+    container.innerHTML = `<div class="floating-card"><p>No matching destinations found.</p></div>`;
+    return;
+  }
+
+  places.forEach((place) => {
+    const card = document.createElement("div");
+    card.className = "floating-card";
+
+    card.innerHTML = `
+      <h4>${place.name}</h4>
+      <img src="${place.imageUrl}" alt="${place.name}" />
+      <p>${place.description}</p>
+      <button>Select</button>
+    `;
+
+    container.appendChild(card);
+  });
 }
